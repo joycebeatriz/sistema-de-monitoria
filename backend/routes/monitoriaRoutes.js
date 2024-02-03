@@ -1,22 +1,19 @@
-// backend/routes/monitoriaRoutes.js
+// monitoriaRoutes.js
 
 const express = require('express');
 const router = express.Router();
-const monitoriaController = require('../controllers/monitoriaController');
+const path = require('path');
+const { listarAgendamentos } = require('../controllers/monitoriaController');
 
-// Rota para agendar uma nova monitoria
-router.post('/agendar', monitoriaController.agendarMonitoria);
+// Rota para a página principal (index.html)
+router.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '../public/index.html'));
+});
 
-// Rota para listar todas as monitorias agendadas
-router.get('/listar', monitoriaController.listarMonitorias);
+// Rota para listar todos os agendamentos
+router.get('/api/agendamentos', listarAgendamentos);
 
-// Rota para encontrar uma monitoria pelo ID
-router.get('/:id', monitoriaController.encontrarMonitoriaPorId);
-
-// Rota para atualizar uma monitoria pelo ID
-router.put('/:id', monitoriaController.atualizarMonitoria);
-
-// Rota para excluir uma monitoria pelo ID
-router.delete('/:id', monitoriaController.excluirMonitoria);
+// Rota para listar os agendamentos do usuário logado
+router.get('/api/meusAgendamentos', listarAgendamentos);
 
 module.exports = router;
