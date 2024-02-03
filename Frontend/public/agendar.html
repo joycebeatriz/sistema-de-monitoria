@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Sistema de monitoria</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+</head>
+
+<body class="sub_page">
+
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="index.html">
+            <!--<img src="images/logo.png" alt="">-->
+            <span>
+              Ada
+            </span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="s-1"> </span>
+            <span class="s-2"> </span>
+            <span class="s-3"> </span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav  ">
+                <li class="nav-item ">
+                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="meusAgendamentos.html"> Meus Agendamentos</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="agendar.html"> Novo Agendamento </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+
+  <!-- Seção de Serviço -->
+  <section class="service_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <h2>Monitores</h2>
+      </div>
+      <div class="service_container">
+        <!-- Tabela -->
+        <table id="tabelaAgendamentos" class="table table-bordered">
+          <thead>
+            <tr>
+              <th style="color: #5625a1;">ID</th>
+              <th style="color: #5625a1;">Disciplina</th>
+              <th style="color: #5625a1;">Horário</th>
+              <th style="color: #5625a1;">Local</th>
+              <th style="color: #5625a1;">Monitor</th>
+              <th style="color: #5625a1;">Email</th>
+              <th style="color: #5625a1;">Agendar</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr id= "monitor-Andre">
+              <td>01</td>
+              <td>Redes</td>
+              <td>Segunda, 13h</td>
+              <td>Online</td>
+              <td>Andre</td>
+              <td>a@gmail.com</td>  
+              <td>
+                <button class="schedule_button" id="01" data-disciplina="Redes" data-horario="Segunda, 13h" data-local="Online"
+                  data-monitor="Andre" data-data="2024-02-01">
+                  Agendar
+                </button>
+                <div class="disponibilidade">02/05 alunos</div>
+              </td>
+            </tr>
+
+
+            <tr id="monitor-sarah">
+              <td>02</td>
+              <td>Lógica Matemática</td>
+              <td>Quinta, 10h</td>
+              <td>Sala 122, INF</td>
+              <td>Sarah</td>
+              <td >Sarah@gmail.com</td>
+              <td>
+                <button class="schedule_button" id="02" data-disciplina="Lógica Matemática" data-horario="Quinta, 10h"
+                  data-local="Sala 122, INF" data-monitor="Sarah" data-data="2024-02-02">
+                  Agendar
+                </button>
+                 <div class="disponibilidade">03/05 alunos</div>
+              </td>
+            </tr>            
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+  <!-- Fim da Seção de Serviço -->
+
+  <!-- Modal HTML -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>Agendar Sessão de Monitoria</h3>
+
+      <!-- Exibição dos dados da primeira linha da tabela -->
+      <p id="modal-text">Nome: <span id="modal-nome"></span>, Email: <span id="modal-email"></span></p>
+
+      <form id="modal-form">
+        <div class="form-group">
+          <label for="nome">Seu Nome:</label>
+          <input type="text" id="nomeInput" name="nome" required class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="email">Seu Email:</label>
+          <input type="email" id="emailInput" name="email" required class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="disciplina">Disciplina:</label>
+          <input type="text" id="disciplinaInput" name="disciplina" required class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="horario">Horário:</label>
+          <input type="text" id="horarioInput" name="horario" required class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="local">Local:</label>
+          <input type="text" id="localInput" name="local" required class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="monitor">Monitor:</label>
+          <input type="text" id="monitorInput" name="monitor" required class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="data">Data:</label>
+          <input type="date" id="dataInput" name="data" required class="form-control">
+        </div>
+        <!-- Fim dos campos ocultos -->
+        <button id="salvarBtn" type="submit" class="btn btn-primary">Salvar</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/owl.carousel.min.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+</html>
