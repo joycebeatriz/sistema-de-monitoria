@@ -1,7 +1,21 @@
 {
   "dependencies": {
     "axios": "^1.6.7",
-    "mysql2": "^3.9.0",
-    "sequelize": "^6.35.2"
+    "body-parser": "^1.20.2",
+    "bootstrap": "^5.3.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.1",
+    "express": "^4.18.2",
+    "google-api-javascript-client": "^0.1.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.9.1",
+    "nodemailer": "^6.9.9",
+    "react-router-dom": "^6.21.3",
+    "sequelize": "^6.35.2",
+    "twilio": "^4.21.0"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.6.2",
+    "vite": "^5.0.12"
   }
 }

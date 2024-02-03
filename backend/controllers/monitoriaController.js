@@ -1,56 +1,33 @@
-// Simulando um banco de dados de monitorias
-let monitorias = [];
+// monitoriaController.js
 
-// Função para agendar uma nova monitoria
-const agendarMonitoria = (req, res) => {
-    const { aluno, disciplina, data, horario } = req.body;
-    const novaMonitoria = { aluno, disciplina, data, horario };
-    monitorias.push(novaMonitoria);
-    res.status(201).json({ message: 'Monitoria agendada com sucesso!', monitoria: novaMonitoria });
-};
+const express = require('express');
+const router = express.Router();
+const path = require('path');
 
-// Função para listar todas as monitorias agendadas
-const listarMonitorias = (req, res) => {
-    res.status(200).json({ monitorias });
-};
+// Definição da função criarAgendamento
+function criarAgendamento(req, res) {
+    // Lógica para criar um novo agendamento
+    // Exemplo:
+    res.status(200).json({ message: 'Agendamento criado com sucesso' });
+}
 
-// Função para encontrar uma monitoria pelo ID
-const encontrarMonitoriaPorId = (req, res) => {
-    const id = req.params.id;
-    const monitoria = monitorias.find(m => m.id === id);
-    if (!monitoria) {
-        return res.status(404).json({ message: 'Monitoria não encontrada.' });
-    }
-    res.status(200).json({ monitoria });
-};
+// Rota para a página principal (index.html)
+router.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '../public/index.html'));
+});
 
-// Função para atualizar uma monitoria pelo ID
-const atualizarMonitoria = (req, res) => {
-    const id = req.params.id;
-    const { aluno, disciplina, data, horario } = req.body;
-    const index = monitorias.findIndex(m => m.id === id);
-    if (index === -1) {
-        return res.status(404).json({ message: 'Monitoria não encontrada.' });
-    }
-    monitorias[index] = { ...monitorias[index], aluno, disciplina, data, horario };
-    res.status(200).json({ message: 'Monitoria atualizada com sucesso!', monitoria: monitorias[index] });
-};
+// Rota para a página de agendamento (agendar.html)
+router.get('/agendar', (req, res) => {
+    res.sendFile(path.join(__dirname, '../public/agendar.html'));
+});
 
-// Função para excluir uma monitoria pelo ID
-const excluirMonitoria = (req, res) => {
-    const id = req.params.id;
-    const index = monitorias.findIndex(m => m.id === id);
-    if (index === -1) {
-        return res.status(404).json({ message: 'Monitoria não encontrada.' });
-    }
-    monitorias.splice(index, 1);
-    res.status(200).json({ message: 'Monitoria excluída com sucesso!' });
-};
+// Rota para a página de meus agendamentos (meusAgendamentos.html)
+router.get('/meusAgendamentos', (req, res) => {
+    res.sendFile(path.join(__dirname, '../public/meusAgendamentos.html'));
+});
 
-module.exports = {
-    agendarMonitoria,
-    listarMonitorias,
-    encontrarMonitoriaPorId,
-    atualizarMonitoria,
-    excluirMonitoria
-};
+// Rota para criar um novo agendamento (incluindo agendar um novo horário)
+router.post('/api/agendar', criarAgendamento);
+
+// Exportação da rota
+module.exports = router;
