@@ -2,17 +2,17 @@
 #### Sistema de Gestão de Suporte Acadêmico para Agendamento de Monitoria
 
 <details>
-  <summary>Introdução e Funcionalidades</summary>
+  <summary style="color:#5625a1">Introdução e Funcionalidades</summary>
   
   O Sistema de Gestão de Suporte Acadêmico para Agendamento de Monitoria, denominado Ada, é uma plataforma desenvolvida para facilitar o agendamento e gerenciamento de sessões de tutoria entre monitores e alunos. Principais características incluem:
 
-- **Agendamento de Sessões de Tutoria:** Facilita o agendamento de sessões de tutoria com monitores disponíveis em diversas disciplinas.
-- **Visualização de Agendamentos:** Oferece uma visualização detalhada dos agendamentos existentes, incluindo disciplina, horário, local e data das sessões de tutoria.
-- **Simulação de Presença Automática:** Permite verificar a presença dos alunos em sala de aula de forma remota, mantendo um ambiente acadêmico engajado e colaborativo.
+- ✅ **Agendamento de Sessões de Tutoria:** Facilita o agendamento de sessões de tutoria com monitores disponíveis em diversas disciplinas.
+- 📅 **Visualização de Agendamentos:** Oferece uma visualização detalhada dos agendamentos existentes, incluindo disciplina, horário, local e data das sessões de tutoria.
+- 📲 **Simulação de Presença Automática:** Permite verificar a presença dos alunos em sala de aula de forma remota, mantendo um ambiente acadêmico engajado e colaborativo.
 </details>
 
 <details>
-  <summary>Arquitetura de Software</summary>
+  <summary style="color:#5625a1">Arquitetura de Software</summary>
   
   O Ada possui uma arquitetura de software que garante segurança, manutenabilidade, usabilidade e portabilidade:
 
@@ -23,7 +23,7 @@
 </details>
 
 <details>
-  <summary>Arquitetura de Sistema</summary>
+  <summary style="color:#5625a1">Arquitetura de Sistema</summary>
   
   O sistema é composto por várias camadas:
 
@@ -34,15 +34,18 @@
 </details>
 
 <details>
-  <summary>Tecnologias Utilizadas</summary>
+  <summary style="color:#5625a1">Tecnologias Utilizadas</summary>
   
-  - **Frontend:** HTML, CSS, JavaScript.
-- **Backend:** Node.js, Express.js, MySQL, Sequelize, Axios, Body-parser, Dotenv.
-- **Outras Tecnologias:** Bootstrap, React Router DOM, Nodemailer, Sequelize-cli, Owl Carousel.
+  | Tecnologia         | Descrição                                     |
+  |--------------------|-----------------------------------------------|
+  | Frontend           | HTML, CSS, JavaScript                         |
+  | Backend            | Node.js, Express.js, MySQL, Sequelize, Axios, Body-parser, Dotenv |
+  | Outras Tecnologias | Bootstrap, React Router DOM, Nodemailer, Sequelize-cli, Owl Carousel |
 </details>
 
+
 <details>
-  <summary>Aspectos de Computação Ubíqua</summary>
+  <summary style="color:#5625a1">Aspectos de Computação Ubíqua</summary>
   
   O Ada incorpora aspectos de computação ubíqua, incluindo:
 
@@ -53,13 +56,13 @@
 </details>
 
 <details>
-  <summary>Sensor de Geolocalização do Celular - GPS (Global Positioning System)</summary>
+  <summary style="color:#5625a1">Sensor de Geolocalização do Celular - GPS (Global Positioning System)</summary>
   
   ### Funcionamento
   O sistema utiliza o sensor de geolocalização do celular (GPS) para a simulação de presença automática do aluno na sala de aula. O funcionamento é baseado na comparação das coordenadas geográficas simuladas com as coordenadas da sala de aula definidas no servidor. Se a distância entre as coordenadas simuladas e as coordenadas da sala de aula for menor que um limite específico, o aluno é considerado presente; caso contrário, é considerado ausente.
 </details>
 
-### Funcionalidade inicial implementada 
+### <span style="color:#5625a1">Funcionalidade inicial implementada</span>
 ![Alt text](<Home.png>)
 
 ![Alt text](<agendamento.png>)
