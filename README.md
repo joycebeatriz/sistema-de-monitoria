@@ -1,5 +1,5 @@
-# Ada
-#### Sistema de Gestão de Suporte Acadêmico para Agendamento de Monitoria
+# Ada - Sistema de Suporte Acadêmico para Agendamento de Monitoria.
+
 
 <details>
   <summary style="color:#5625a1">Introdução e Funcionalidades</summary>
