@@ -59,10 +59,14 @@
   <summary style="color:#5625a1">Sensor de Geolocalização do Celular - GPS (Global Positioning System)</summary>
   
   O sistema utiliza o sensor de geolocalização do celular (GPS) para a simulação de presença automática do aluno na sala de aula. O funcionamento é baseado na comparação das coordenadas geográficas simuladas com as coordenadas da sala de aula definidas no servidor. Se a distância entre as coordenadas simuladas e as coordenadas da sala de aula for menor que um limite específico, o aluno é considerado presente; caso contrário, é considerado ausente.
+
+![Alt text](image.png)
+
 </details>
 
 ----------------
 ### <span style="color:#5625a1">Funcionalidade inicial implementada</span>
+
 ![Alt text](<Home.png>)
 
 ![Alt text](<agendamento.png>)
