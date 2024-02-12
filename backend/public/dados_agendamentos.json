@@ -1,0 +1,18 @@
+{
+    "monitores": [
+      {
+        "id": "01",
+        "disciplina": "Redes",
+        "horario": "Segunda, 13h",
+        "local": "Online",
+        "monitor": "Andre"
+      },
+      {
+        "id": "02",
+        "disciplina": "Lógica Matemática",
+        "horario": "Quinta, 10h",
+        "local": "Sala 122, INF",
+        "monitor": "Sarah"
+      }
+    ]
+  }
