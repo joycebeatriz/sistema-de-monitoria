@@ -1,0 +1,5 @@
+*.log
+node_modules
+.env
+config.json
+config.json.save
