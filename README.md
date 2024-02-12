@@ -77,4 +77,3 @@
   <summary style="color:#5625a1">📝 Feedback </summary>
   <img src="image-1.png" alt="Imagem 1">
 </details>
-
